@@ -22,7 +22,7 @@ var fire_modern = function(element, type, opts) {
         family = 'KeyEvent';
     }
 
-    var ev = doc.createEvent(family + 's');
+    var ev = doc.createEvent(family);
     var init_fn = 'init' + family;
     var init = typeof ev[init_fn] === 'function' ? init_fn : 'initEvent';
 
