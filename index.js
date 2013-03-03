@@ -19,7 +19,7 @@ var fire_modern = function(element, type, opts) {
     // which init fn do we use
     var family = typeOf(type);
     if (family === 'KeyboardEvent' && use_key_event) {
-        family = 'KeyEvent';
+        family = 'KeyEvents';
     }
 
     var ev = doc.createEvent(family);
