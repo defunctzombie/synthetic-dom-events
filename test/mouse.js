@@ -1,15 +1,16 @@
 var assert = require('assert');
 
-var emit = require('../');
+var event = require('../');
 var dom = require('./dom');
 
 test('click', function(done) {
     var el = dom.create('div');
     dom.on(el, 'click', function(ev) {
+        assert.equal(ev.type, 'click');
         assert.equal(ev.button, 0);
         done();
     });
-    emit(el, 'click');
+    dom.emit(el, event('click'));
 });
 
 test('click - button 2', function(done) {
@@ -18,6 +19,6 @@ test('click - button 2', function(done) {
         assert.equal(ev.button, 2);
         done();
     });
-    emit(el, 'click', { button: 2 });
+    dom.emit(el, event('click', { button: 2 }));
 });
 

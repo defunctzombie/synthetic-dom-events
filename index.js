@@ -14,7 +14,8 @@ catch (err) {
 }
 
 // modern browsers, do a proper dispatchEvent()
-var fire_modern = function(element, type, opts) {
+var modern = function(type, opts) {
+    opts = opts || {};
 
     // which init fn do we use
     var family = typeOf(type);
@@ -50,12 +51,11 @@ var fire_modern = function(element, type, opts) {
         }
     }
 
-    return element.dispatchEvent(ev);
+    return ev;
 };
 
-// old browser use onpropertychange, just increment a custom property to trigger the event
-var fire_legacy = function (element, type, opts) {
-    element = (element === doc || element === win) ? root : element;
+var legacy = function (type, opts) {
+    opts = opts || {};
     var ev = doc.createEventObject();
 
     ev.type = type;
@@ -65,13 +65,13 @@ var fire_legacy = function (element, type, opts) {
         }
     }
 
-    return element.fireEvent('on' + type, ev);
+    return ev;
 };
 
-var fireListener = root.addEventListener ? fire_modern : fire_legacy;
-module.exports = function(el, type, opts) {
-    return fireListener(el, type, opts || {});
-};
+// expose either the modern version of event generation or legacy
+// depending on what we support
+// avoids if statements in the code later
+module.exports = doc.createEvent ? modern : legacy;
 
 var initSignatures = require('./init.json');
 var types = require('./types.json');

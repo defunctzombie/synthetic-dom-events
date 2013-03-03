@@ -1,12 +1,19 @@
 # synthetic-dom-events
 
-[![browser support](http://ci.testling.com/shtylman/synthetic-dom-events.png)](http://ci.testling.com/synthetic-dom-events)
+[![browser support](http://ci.testling.com/shtylman/synthetic-dom-events.png)](http://ci.testling.com/shtylman/synthetic-dom-events)
 
 ## example
 
 ```js
-var emit = require('synthetic-dom-events');
+var event = require('synthetic-dom-events');
+
+// event just returns a correctly created dom event object
+// you are responsible for emitting it
+var ev = event('click', { button: 2 });
 
 var element = document.createElement('button');
-emit(element, 'click');
+element.dispatchEvent(ev);
+
+// or legacy IE
+//element.fireEvent('on' + ev.type, ev);
 ```

@@ -19,5 +19,15 @@ var create = function(str) {
     return el;
 };
 
+var emit = function(element, event) {
+    if (element.dispatchEvent) {
+        element.dispatchEvent(event);
+    }
+    else {
+        element.fireEvent('on' + event.type, event);
+    }
+};
+
 module.exports.on = on;
 module.exports.create = create;
+module.exports.emit = emit;

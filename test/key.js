@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var emit = require('../');
+var event = require('../');
 var dom = require('./dom');
 
 var legacy = !document.createEvent;
@@ -8,6 +8,7 @@ var legacy = !document.createEvent;
 test('keyup', function(done) {
     var el = dom.create('input');
     dom.on(el, 'keyup', function(ev) {
+        assert.equal(ev.type, 'keyup');
         if (global.KeyboardEvent) {
             assert.ok(ev instanceof KeyboardEvent);
         }
@@ -21,5 +22,5 @@ test('keyup', function(done) {
         assert.equal(ev.altKey, false);
         done();
     });
-    emit(el, 'keyup');
+    dom.emit(el, event('keyup'));
 });
