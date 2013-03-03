@@ -38,6 +38,7 @@ var fire_modern = function(element, type, opts) {
         if (val === undefined) {
             val = ev[key];
         }
+        used[key] = true;
         args.push(val);
     }
     ev[init].apply(ev, args);
