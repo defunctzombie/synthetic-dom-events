@@ -54,20 +54,20 @@ var fire_modern = function(element, type, opts) {
 
 // old browser use onpropertychange, just increment a custom property to trigger the event
 var fire_legacy = function (element, type, opts) {
-    element = (element === doc || element === win) ? root : element
+    element = (element === doc || element === win) ? root : element;
     var ev = doc.createEventObject();
 
     ev.type = type;
     for (var key in opts) {
-        if (ev[key] === undefined) {
+        if (opts[key] !== undefined) {
             ev[key] = opts[key];
         }
     }
 
-    element.fireEvent('on' + type, ev);
-}
+    return element.fireEvent('on' + type, ev);
+};
 
-var fireListener = root.addEventListener ? fire_modern : fire_legacy
+var fireListener = root.addEventListener ? fire_modern : fire_legacy;
 module.exports = function(el, type, opts) {
     return fireListener(el, type, opts || {});
 };

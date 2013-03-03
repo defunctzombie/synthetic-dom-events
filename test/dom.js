@@ -4,7 +4,10 @@ var on = function(el, type, fn, capture) {
     if (el.addEventListener) {
         el.addEventListener(type, fn, capture || false);
     } else {
-        el.attachEvent('on' + type, fn);
+        var res = el.attachEvent('on' + type, fn);
+        if (!res) {
+            throw new Error('unable to bind event: ' + type);
+        }
     }
 
     return fn;
