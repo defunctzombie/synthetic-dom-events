@@ -8,13 +8,17 @@ var legacy = !document.createEvent;
 test('keyup', function(done) {
     var el = dom.create('input');
     dom.on(el, 'keyup', function(ev) {
-        if (legacy) {
+        if (global.KeyboardEvent) {
+            assert.ok(ev instanceof KeyboardEvent);
+        }
+        else if (global.Event) {
             assert.ok(ev instanceof Event);
         }
         else {
-            assert.ok(ev instanceof KeyboardEvent);
+            // IE <= 7 has no Event object, fucking hell
         }
 
+        assert.equal(ev.altKey, false);
         done();
     });
     emit(el, 'keyup');
