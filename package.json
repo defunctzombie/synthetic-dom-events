@@ -1,7 +1,7 @@
 {
   "name": "synthetic-dom-events",
   "version": "0.0.0",
-  "description": "emit DOM events on DOM elements",
+  "description": "create DOM events for builtin event types",
   "main": "index.js",
   "directories": {
     "test": "test"
