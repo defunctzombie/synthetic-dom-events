@@ -24,3 +24,21 @@ test('keyup', function(done) {
     });
     dom.emit(el, event('keyup'));
 });
+
+test('ctrlKey', function(done) {
+    var el = dom.create('input');
+    dom.on(el, 'keyup', function(ev) {
+        assert.ok(ev.ctrlKey);
+        done();
+    });
+    dom.emit(el, event('keyup', { ctrlKey: true }));
+});
+
+test('keyCode', function(done) {
+    var el = dom.create('input');
+    dom.on(el, 'keyup', function(ev) {
+        assert.equal(ev.keyCode, 30);
+        done();
+    });
+    dom.emit(el, event('keyup', { keyCode: 30 }));
+});
