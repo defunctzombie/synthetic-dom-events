@@ -1,6 +1,6 @@
 # synthetic-dom-events
 
-[![browser support](http://ci.testling.com/shtylman/synthetic-dom-events.png)](http://ci.testling.com/shtylman/synthetic-dom-events)
+[![browser support](https://ci.testling.com/shtylman/synthetic-dom-events.png)](https://ci.testling.com/shtylman/synthetic-dom-events)
 
 ## example
 
