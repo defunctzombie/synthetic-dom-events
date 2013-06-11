@@ -21,7 +21,7 @@
     "DOMAttrModified",
     "DOMCharacterDataModified"
   ],
-  "HTMLEvent" : [
+  "HTMLEvents" : [
     "load",
     "unload",
     "abort",
