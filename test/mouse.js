@@ -3,6 +3,8 @@ var assert = require('assert');
 var event = require('../');
 var dom = require('./dom');
 
+suite('mouse');
+
 test('click', function(done) {
     var el = dom.create('div');
     dom.on(el, 'click', function(ev) {

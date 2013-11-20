@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+- '0.10'
+env:
+  global:
+  - secure: Kjy9FYeJA2Vcarja2IoXnvzUt4GIjle5UHxrivEZZOhwcsAJD/1s7tqlSU5STMwrPoG1OZJ0DUsprbpwdFqzdi0SGxYO85SJZy/tKFnLgEIUft7hRe6P+5HY/LoCTsywktW15HGb7MeUQ2D3TxtTCo4Pwy42/1i2BqpgbtjQL0o=
+  - secure: g4B4eS3kOGLXI+eiaAOrLkQNKqA936EY83l3Ph6vAscmLC7QFlNvUISZmLS6dd+sSQVk4W0+c4dnBY54oRgp4GZeHaUuxfrkRYlpDRwyksg2kUj5rsfnSvFKBT8XdiqIzclGIINvSKzZTG6W4SPK7hiomm4KRSeDzlMAgNg20uk=

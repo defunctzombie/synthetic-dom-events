@@ -3,6 +3,8 @@ var assert = require('assert');
 var event = require('../');
 var dom = require('./dom');
 
+suite('key');
+
 var legacy = !document.createEvent;
 
 test('keyup', function(done) {

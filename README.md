@@ -1,6 +1,6 @@
 # synthetic-dom-events
 
-[![browser support](https://ci.testling.com/shtylman/synthetic-dom-events.png)](https://ci.testling.com/shtylman/synthetic-dom-events)
+[![Build Status](https://travis-ci.org/defunctzombie/synthetic-dom-events.png?branch=master)](https://travis-ci.org/defunctzombie/synthetic-dom-events)
 
 ## example
 

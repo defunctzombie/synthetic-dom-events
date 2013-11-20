@@ -3,6 +3,8 @@ var assert = require('assert');
 var event = require('../');
 var dom = require('./dom');
 
+suite('html');
+
 test('change', function(done) {
     var el = dom.create('input');
     dom.on(el, 'change', function(ev) {

@@ -11,22 +11,11 @@
     "url": "git://github.com/shtylman/synthetic-dom-events.git"
   },
   "scripts": {
-    "test": "zuul test/*.js --ui tdd"
+    "test": "zuul test/*.js"
   },
   "devDependencies": {
-    "zuul": "0.0.6",
-    "mocha": "~1.8.1"
+    "zuul": "~1.0.3"
   },
   "author": "Roman Shtylman <shtylman@gmail.com>",
-  "license": "MIT",
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/6..latest",
-      "firefox/3.6..latest",
-      "chrome/4.0..latest",
-      "safari/5.1..latest"
-    ],
-    "harness": "mocha-tdd"
-  }
+  "license": "MIT"
 }
