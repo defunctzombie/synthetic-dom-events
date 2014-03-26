@@ -1,7 +1,7 @@
 
 // for compression
-var win = window;
-var doc = document || {};
+var win = require('global/window');
+var doc = require('global/document');
 var root = doc.documentElement || {};
 
 // detect if we need to use firefox KeyEvents vs KeyboardEvents
