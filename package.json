@@ -17,5 +17,8 @@
     "zuul": "~1.0.3"
   },
   "author": "Roman Shtylman <shtylman@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "global": "3.0.0"
+  }
 }
