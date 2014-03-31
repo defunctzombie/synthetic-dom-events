@@ -11,7 +11,8 @@
     "url": "git://github.com/shtylman/synthetic-dom-events.git"
   },
   "scripts": {
-    "test": "zuul test/*.js"
+    "test": "zuul test/*.js",
+    "test-local": "zuul --local -- test/*.js"
   },
   "devDependencies": {
     "zuul": "~1.0.3"
