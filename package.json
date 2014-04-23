@@ -20,6 +20,5 @@
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "global": "4.0.0"
   }
 }
