@@ -1,6 +1,6 @@
 {
   "name": "synthetic-dom-events",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "create DOM events for builtin event types",
   "main": "index.js",
   "directories": {
@@ -19,6 +19,5 @@
   },
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
