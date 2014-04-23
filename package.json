@@ -20,6 +20,6 @@
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "global": "3.0.0"
+    "global": "4.0.0"
   }
 }
