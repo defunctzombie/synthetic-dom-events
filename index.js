@@ -1,8 +1,6 @@
 
 // for compression
-var win = global.window;
-var doc = global.document;
-var root = doc.documentElement || {};
+var doc = require('global/document');
 
 // detect if we need to use firefox KeyEvents vs KeyboardEvents
 var use_key_event = true;
@@ -22,7 +20,7 @@ function check_kb(ev, opts) {
         ev.keyCode != (opts.keyCode || 0) ||
         ev.charCode != (opts.charCode || 0)) {
 
-        ev = document.createEvent('Event');
+        ev = doc.createEvent('Event');
         ev.initEvent(opts.type, opts.bubbles, opts.cancelable);
         ev.ctrlKey  = opts.ctrlKey || false;
         ev.altKey   = opts.altKey || false;
