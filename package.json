@@ -1,6 +1,6 @@
 {
   "name": "synthetic-dom-events",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "create DOM events for builtin event types",
   "main": "index.js",
   "directories": {
@@ -15,7 +15,7 @@
     "test-local": "zuul --local -- test/*.js"
   },
   "devDependencies": {
-    "zuul": "~1.6.3"
+    "zuul": "~3.1.0"
   },
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT",
