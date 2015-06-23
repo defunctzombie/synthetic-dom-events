@@ -1,6 +1,6 @@
 {
   "name": "synthetic-dom-events",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "create DOM events for builtin event types",
   "main": "index.js",
   "directories": {
