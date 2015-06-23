@@ -1,6 +1,6 @@
 # synthetic-dom-events
 
-[![Build Status](https://travis-ci.org/defunctzombie/synthetic-dom-events.png?branch=master)](https://travis-ci.org/defunctzombie/synthetic-dom-events)
+[![Build Status](https://travis-ci.org/defunctzombie/synthetic-dom-events.svg?branch=master)](https://travis-ci.org/defunctzombie/synthetic-dom-events)
 
 ## example
 
