@@ -1,3 +1,8 @@
+// Guard against document not being defined in non-browser environments.
+if (typeof global.document !== 'undefined') {
+    module.exports = function (){};
+    return;
+}
 
 // for compression
 var win = global.window;
