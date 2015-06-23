@@ -19,5 +19,7 @@
   },
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "global": "^4.1.0"
+  }
 }
